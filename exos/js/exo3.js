@@ -11,3 +11,17 @@ const firstNumber = helper.randomInt(1, 8);
 console.log(firstNumber);
 const secondNumber = helper.randomInt(2, 7);
 console.log(secondNumber);
+
+
+if (firstNumber > secondNumber) {
+  // instructions si condition 1 vérifiée
+  result = "plus";
+} else if (firstNumber < secondNumber) {
+  // instructions si condition 1 non vérifiée, et condition 2 vérifiée
+  result = "minus";
+} else {
+  // instructions si aucune condition vérifiée
+  result = "equal";
+}
+
+// exo 1,2 et 3 terminé 25 mn

@@ -6,5 +6,8 @@
  */
 
 // 1 nombre à virgule aléatoire a été généré automatiquement (floatNumber)
+
 const floatNumber = helper.randomInt(1001, 1000000) / 1000;
 console.log(floatNumber);
+
+let roundedInt = Math.round(floatNumber);
