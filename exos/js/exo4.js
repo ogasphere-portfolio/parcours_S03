@@ -10,3 +10,22 @@
  */
 
 // TODO
+
+// récuperation du prénom saisie
+const inputContent = document.querySelector('#fname').value;
+
+// on récupere l'element <div id="prenom"> 
+const prenom = document.querySelector('#prenom');
+
+// On crée un element span
+let item = document.createElement('span');
+
+// on modifie le contenu de la balise span
+item.innerHTML = '<span class="valeur-fiche">'+inputContent+'</span>';
+
+// on affiche la span dans le dom
+prenom.appendChild(item);
+
+
+
+// exo 4 terminé 20 mn
