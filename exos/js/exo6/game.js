@@ -33,6 +33,7 @@ const game = {
     // Si le jeu est déjà fini, c'est qu'on l'a résolé sans "break" dans la boucle.
     if(game.win) {
       check.displayResult(true, 'Tu as trouvé le nombre "' + game.secret + '" en ' + game.tries + ' essai(s) <br> Tu tentes le bonus maintenant ?');
+      console.log('sans break')
     }
 
     // On check les 3 cas de figures

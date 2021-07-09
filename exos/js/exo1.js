@@ -8,8 +8,8 @@
 
  // 2 nombres ont été générés automatiquement (firstNumber & secondNumber)
 const firstNumber = helper.randomInt(0, 1000);
-console.log(firstNumber);
+
 const secondNumber = helper.randomInt(0, 1000);
-console.log(secondNumber);
+
 
 median = (firstNumber+secondNumber)/2

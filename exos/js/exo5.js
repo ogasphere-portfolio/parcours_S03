@@ -7,7 +7,12 @@
 
 // TODO
 
-
+function calculateMedian(firstNumber,secondNumber) {
+    const median = (firstNumber+secondNumber)/2;
+    return median;
+}
 
 // Décommenter la ligne ci-dessous pour tester. On devrait avoir "15" dans la console
-// console.log(calculateMedian(10, 20));
+console.log(calculateMedian(10, 20));
+
+// exo 5 terminé 7 mn

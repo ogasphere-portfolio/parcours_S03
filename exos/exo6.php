@@ -20,7 +20,8 @@
 			<div id="result"></div>
 
 		</section>
-
+		<!-- <script src="js/exo6/game.js"></script> -->
+		
 <?php
 includeExoJsFile(6);
 include 'inc/footer.tpl.php';

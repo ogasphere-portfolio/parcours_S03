@@ -33,7 +33,32 @@ const exo7 = {
     console.log(exo7.secondNumber);
 
     // TODO
-  }
+    // on branche un mouchard sur le submit
+    window.addEventListener('submit', exo7.handlesubmit);
+    
+    // On appele la fonction permettant d'affocher les deux nombres
+    exo7.dysplayNumber();
+
+
+  },
+  dysplayNumber: function (){
+    // on affiche les deux nombres dans le span correespondant
+    const number1 = document.querySelector('#number1');
+    const number2 = document.querySelector('#number2');
+    
+    number1.textContent = exo7.firstNumber;
+    number2.textContent = exo7.secondNumber;
+    
+
+  },
+  handlesubmit: function(event){
+    // on empeche le rafraichissement de la page
+    event.preventDefault();
+    
+    // on recupere le formulaire
+
+
+  },
 }
 
 document.addEventListener('DOMContentLoaded', exo7.init);

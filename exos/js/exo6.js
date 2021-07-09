@@ -32,11 +32,27 @@ const exo6 = {
 
     // On lance le jeu
     game.init();
+    exo6.play();
 
     // TODO
+  },
+  play: function() {
+    
+    // boucle de 0 à 19
+    for (let index = 0; index < 20; index++) {
+      
+      
+      if (game.win) {   // si le nombre à été trouvé on arrete la partie
+        break;
+      }else{            // Sinon on essaye un autre nombre
+        game.guess(index);
+      }
+      
+    } // Fin de la boucle
   }
-}
 
+}
 document.addEventListener('DOMContentLoaded', exo6.init);
 
+// Exo 6 terminé 45mn
 
