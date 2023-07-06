@@ -49,43 +49,42 @@ const bonus = {
     }
 
     let result = bonus.searchDichotomiqueRécursive(game.secret, myListSort);
-    console.log(result);
+    bonus.displayResult(result);
   },
 
   searchDichotomiqueRécursive: function (numberSecret, myListSort) {
-    console.log("Nombre à trouvé" + numberSecret);
+    console.log("Nombre à trouver: " + numberSecret);
 
     let len = myListSort.length;
+    console.log("Longueur de la liste: " + len);
 
-    console.log(len);
-    let m = Math.round(len / 2);
-    console.log(m);
+    let m = Math.floor(len / 2);
+    console.log("Milieu de la liste: " + m);
 
-    if (myListSort[m] == numberSecret) {
-      console.log("result : " + m);
-      return m;
+    if (myListSort[m] === numberSecret) {
+      console.log("Résultat: " + myListSort[m]);
+      return myListSort[m];
     }
 
     if (myListSort[m] > numberSecret) {
-      console.log("plus grand" + myListSort[m]);
-      myListSort.length = 0;
-      for (let index = 0; index < m - 1; index++) {
-        myListSort.push(index + 1);
-      }
-      console.log("nouvelle longueur si plus grand" + myListSort.length);
-
-      return bonus.searchDichotomiqueRécursive(numberSecret, myListSort);
+      console.log("Plus grand que " + myListSort[m]);
+      let newList = myListSort.slice(0, m);
+      console.log("Nouvelle longueur si plus grand: " + newList.length);
+      return bonus.searchDichotomiqueRécursive(numberSecret, newList);
     } else {
-      console.log("plus petit" + myListSort[m]);
-
-      myListSort.length = 0;
-      for (let index = m + 1; index < len; index--) {
-        myListSort.push(index);
-      }
-      console.log("nouvelle longueur si plus petit" + myListSort.length);
-
-      return bonus.searchDichotomiqueRécursive(numberSecret, myListSort);
+      console.log("Plus petit que " + myListSort[m]);
+      let newList = myListSort.slice(m + 1);
+      console.log("Nouvelle longueur si plus petit: " + newList.length);
+      return bonus.searchDichotomiqueRécursive(numberSecret, newList);
     }
+  },
+  displayResult: function (result) {
+    
+    // On affiche la médiane
+    const resultat = document.querySelector("#result");
+    resultat.textContent = "résultat : "+ result;
+
+    
   },
 };
 
