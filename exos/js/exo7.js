@@ -105,7 +105,7 @@ const exo7 = {
     // on affiche les deux nombres dans le span correespondant
     const number1 = document.querySelector("#number1");
     const number2 = document.querySelector("#number2");
-
+console.log(exo7.firstNumber);
     number1.textContent = exo7.firstNumber;
     number2.textContent = exo7.secondNumber;
   },
@@ -134,5 +134,5 @@ const exo7 = {
   },
 };
 
-
+exo7.init();
 // Exo 7 terminé 1h20mn  cumul : 2h57 ouff
